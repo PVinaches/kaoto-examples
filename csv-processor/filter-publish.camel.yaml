@@ -35,5 +35,5 @@
                   description: Sent by Kafka
                   uri: kafka
                   parameters:
-                    brokers: localhost:9092
+                    brokers: "{{csv-processor.kafka.brokers}}"
                     topic: Kafka-Message

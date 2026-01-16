@@ -16,9 +16,9 @@
             description: Save in Postgres
             uri: kamelet:postgresql-sink
             parameters:
-              databaseName: test
-              password: test
+              databaseName: "{{csv-processor.postgres.database-name}}"
+              password: "{{csv-processor.postgres.password}}"
               query: INSERT INTO patients (id, birthdate, ZIP) VALUES (:#${body[Id]},
                 :#${body[BIRTHDATE]}, :#${body[ZIP]});
-              serverName: localhost
-              username: test
+              serverName: "{{csv-processor.postgres.server-name}}"
+              username: "{{csv-processor.postgres.username}}"
