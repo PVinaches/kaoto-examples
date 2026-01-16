@@ -8,7 +8,7 @@
         directoryName: ./test-file
         idempotent: true
         idempotentKey: ${file:name}
-        noop: true
+        move: done
       steps:
         - unmarshal:
             id: unmarshal-3798
